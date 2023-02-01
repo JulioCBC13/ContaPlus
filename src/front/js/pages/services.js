@@ -34,16 +34,20 @@ export const Services = () => {
             determinado.
           </h4>
           <form className="d-flex justify-content-start">
-            <Link to="/balance">
-              <button type="submit" className="btn">
-                Solicitud del Cliente
-              </button>
-            </Link>
-            <Link to="/datos-balance">
-              <button type="submit" className="btn">
-                Hay {store.listaBalances.length} solicitudes realizadas
-              </button>
-            </Link>
+            {store.usuario && (
+              <Link to="/balance">
+                <button type="submit" className="btn">
+                  Solicitud del Cliente
+                </button>
+              </Link>
+            )}
+            {store.contador && (
+              <Link to="/datos-balance">
+                <button type="submit" className="btn">
+                  Hay {store.listaBalances.length} solicitudes realizadas
+                </button>
+              </Link>
+            )}
             <button type="submit" className="btn">
               Solicitud completada. Lista para descarga.
             </button>
@@ -61,16 +65,20 @@ export const Services = () => {
             de actividades lícitas.
           </h4>
           <form className="d-flex justify-content-start">
-            <Link to="/ingresos">
-              <button type="submit" className="btn btn-success">
-                Certificación de Ingresos
-              </button>
-            </Link>
-            <Link to="/datos-ingresos">
-              <button type="submit" className="btn">
-                Aviso de solicitud realizada
-              </button>
-            </Link>
+            {store.usuario && (
+              <Link to="/ingresos">
+                <button type="submit" className="btn btn-success">
+                  Certificación de Ingresos
+                </button>
+              </Link>
+            )}
+            {store.contador && (
+              <Link to="/datos-ingresos">
+                <button type="submit" className="btn">
+                  Aviso de solicitud realizada
+                </button>
+              </Link>
+            )}
             <button type="submit" className="btn">
               Solicitud completada. Lista para descarga.
             </button>
@@ -91,16 +99,20 @@ export const Services = () => {
             contribuyente.
           </h4>
           <form className="d-flex justify-content-start">
-            <Link to="/impuestos">
-              <button type="submit" className="btn btn-success">
-                Declaración de Impuestos
-              </button>
-            </Link>
-            <Link to="/datos-impuestos">
-              <button type="submit" className="btn">
-                Aviso de solicitud realizada
-              </button>
-            </Link>
+            {store.usuario && (
+              <Link to="/impuestos">
+                <button type="submit" className="btn btn-success">
+                  Declaración de Impuestos
+                </button>
+              </Link>
+            )}
+            {store.contador && (
+              <Link to="/datos-impuestos">
+                <button type="submit" className="btn">
+                  Aviso de solicitud realizada
+                </button>
+              </Link>
+            )}
             <button type="submit" className="btn">
               Solicitud completada. Lista para descarga.
             </button>

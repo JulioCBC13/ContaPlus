@@ -65,7 +65,7 @@ def funciondelogin():
 
     if usuario == None:
         contador = Contador.query.filter_by(email=email, password=password).one_or_none()
-        if contador != None:
+        if contador == None:
             return jsonify({"msg": "Usuario y Contrateña invalida"})
         return jsonify({ "token": create_access_token(identity=email),"contador":True })
     return jsonify({ "token": create_access_token(identity=email),"usuario":True })

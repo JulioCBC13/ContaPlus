@@ -1,12 +1,14 @@
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
-      listaBalances:[],
-      listaIngresos:[],
-      listaImpuestos:[],
-      listaAsesorias:[],
+      listaBalances: [],
+      listaIngresos: [],
+      listaImpuestos: [],
+      listaAsesorias: [],
       message: null,
       token: localStorage.getItem("token"),
+      usuario: null,
+      contador: null,
       demo: [
         {
           title: "FIRST",
@@ -18,7 +20,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           background: "white",
           initial: "white",
         },
-      ],     
+      ],
     },
     actions: {
       // Use getActions to call a function within a fuction
@@ -93,6 +95,12 @@ const getState = ({ getStore, getActions, setStore }) => {
           console.log("Viene del backend", data);
           sessionStorage.setItem("token", data.token);
           setStore({ token: data.token });
+          if (data.usuario == true) {
+            setStore({ usuario: true });
+          } else {
+            setStore({ contador: true });
+          }
+
           return true;
         } catch (error) {
           console.error("Error al hacer login");
@@ -105,25 +113,25 @@ const getState = ({ getStore, getActions, setStore }) => {
         );
         if (token && token != "" && token != undefined)
           setStore({ token: token });
-          else {
-            actions.logout();
-          }
+        else {
+          actions.logout();
+        }
       },
       // loginFlux: async (email, password) => {
       //   const resp = await fetch(process.env.BACKEND_URL + "/api/login", {
-          // method: "POST", // *GET, POST, PUT, DELETE, etc.
-          // headers: {
-          //   "Content-Type": "application/json",
-            // 'Content-Type': 'application/x-www-form-urlencoded',
-        //   },
-        //   body: JSON.stringify({
-        //     email: email,
-        //     password: password,
-        //   }),
-        // });
-        // const data = await resp.json();
-        // setStore({ token: data.token });
-        // sessionStorage.setItem("token", data.token);
+      // method: "POST", // *GET, POST, PUT, DELETE, etc.
+      // headers: {
+      //   "Content-Type": "application/json",
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+      //   },
+      //   body: JSON.stringify({
+      //     email: email,
+      //     password: password,
+      //   }),
+      // });
+      // const data = await resp.json();
+      // setStore({ token: data.token });
+      // sessionStorage.setItem("token", data.token);
       //},
       logout: () => {
         const token = localStorage.removeItem("token");
@@ -131,35 +139,33 @@ const getState = ({ getStore, getActions, setStore }) => {
         setStore({ token: null });
       },
 
-      loadBalances: async()=>{
-        const resp = await fetch(process.env.BACKEND_URL + "/api/balance")
+      loadBalances: async () => {
+        const resp = await fetch(process.env.BACKEND_URL + "/api/balance");
         const data = await resp.json();
         console.log(data);
-        setStore({listaBalances: data})
+        setStore({ listaBalances: data });
       },
-      loadIngresos: async()=>{
-        const resp = await fetch(process.env.BACKEND_URL + "/api/ingresos")
+      loadIngresos: async () => {
+        const resp = await fetch(process.env.BACKEND_URL + "/api/ingresos");
         const data = await resp.json();
         console.log(data);
-        setStore({listaIngresos: data})
+        setStore({ listaIngresos: data });
       },
-      loadImpuestos: async()=>{
-        const resp = await fetch(process.env.BACKEND_URL + "/api/impuestos")
+      loadImpuestos: async () => {
+        const resp = await fetch(process.env.BACKEND_URL + "/api/impuestos");
         const data = await resp.json();
         console.log(data);
-        setStore({listaImpuestos: data})
+        setStore({ listaImpuestos: data });
       },
-      loadAsesorias: async()=>{
-        const resp = await fetch(process.env.BACKEND_URL + "/api/asesorias")
+      loadAsesorias: async () => {
+        const resp = await fetch(process.env.BACKEND_URL + "/api/asesorias");
         const data = await resp.json();
         console.log(data);
-        setStore({listaAsesorias: data})
+        setStore({ listaAsesorias: data });
       },
 
-      
-      
-      nuevoBalance: async (balance)=>{
-        console.log("se creó el balance",balance);
+      nuevoBalance: async (balance) => {
+        console.log("se creó el balance", balance);
         const resp = await fetch(process.env.BACKEND_URL + "/api/balance", {
           method: "POST", // *GET, POST, PUT, DELETE, etc.
           headers: {
@@ -170,8 +176,8 @@ const getState = ({ getStore, getActions, setStore }) => {
         });
       },
 
- nuevaCertifIngresos: async (ingresos)=>{
-        console.log("se creó la certificación de ingresos",ingresos);
+      nuevaCertifIngresos: async (ingresos) => {
+        console.log("se creó la certificación de ingresos", ingresos);
         const resp = await fetch(process.env.BACKEND_URL + "/api/ingresos", {
           method: "POST", // *GET, POST, PUT, DELETE, etc.
           headers: {
@@ -182,8 +188,8 @@ const getState = ({ getStore, getActions, setStore }) => {
         });
       },
 
-      nuevaDeclaraImpuestos: async (impuestos)=>{
-        console.log("se creó la declaración de impuestos",impuestos);
+      nuevaDeclaraImpuestos: async (impuestos) => {
+        console.log("se creó la declaración de impuestos", impuestos);
         const resp = await fetch(process.env.BACKEND_URL + "/api/impuestos", {
           method: "POST", // *GET, POST, PUT, DELETE, etc.
           headers: {
@@ -194,8 +200,8 @@ const getState = ({ getStore, getActions, setStore }) => {
         });
       },
 
-      nuevaAsesoria: async (asesoria)=>{
-        console.log("se creó la cita para asesoria personalizada",asesoria);
+      nuevaAsesoria: async (asesoria) => {
+        console.log("se creó la cita para asesoria personalizada", asesoria);
         const resp = await fetch(process.env.BACKEND_URL + "/api/asesorias", {
           method: "POST", // *GET, POST, PUT, DELETE, etc.
           headers: {
@@ -204,8 +210,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           },
           body: JSON.stringify(asesoria),
         });
-      }
-
+      },
     },
   };
 };

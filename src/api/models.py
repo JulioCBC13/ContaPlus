@@ -90,13 +90,16 @@ class BalanceP(db.Model):
     bancoInfo = db.Column(db.String(100), unique=True, nullable=False)
     vehiculosAmount = db.Column(db.String(100), unique=True, nullable=False)
     propiedadesAmount = db.Column(db.String(100), unique=True, nullable=False)
+    solicitud = db.Column(db.String(100), unique=True, nullable=False)
 
-    def __init__(self,completeName,cedula,bancoInfo,vehiculosAmount,propiedadesAmount):
+    def __init__(self,completeName,cedula,bancoInfo,vehiculosAmount,propiedadesAmount,solicitud):
         self.completeName = completeName
         self.cedula  = cedula
         self.bancoInfo = bancoInfo
         self.vehiculosAmount = vehiculosAmount
         self.propiedadesAmount = propiedadesAmount
+        self.solicitud = solicitud
+        
         
 
     def serialize(self):
@@ -105,7 +108,8 @@ class BalanceP(db.Model):
             "cedula" : self.cedula,
             "bancoInfo" : self.bancoInfo,
             "vehiculosAmount" : self.vehiculosAmount,
-            "propiedadesAmount" : self.propiedadesAmount
+            "propiedadesAmount" : self.propiedadesAmount,
+            "solicitud" : self.solicitud
         } 
 
 class CertificacionI(db.Model):
@@ -116,12 +120,14 @@ class CertificacionI(db.Model):
     cedula = db.Column(db.String(100), unique=True, nullable=False)
     promedioMensual = db.Column(db.String(100), unique=True, nullable=False)
     ocupacion = db.Column(db.String(100), unique=True, nullable=False)
+    solicitud = db.Column(db.String(100), unique=True, nullable=False)
 
-    def __init__(self,completeName,cedula,promedioMensual,ocupacion):
+    def __init__(self,completeName,cedula,promedioMensual,ocupacion,solicitud):
         self.completeName = completeName
         self.cedula  = cedula
         self. promedioMensual = promedioMensual
         self. ocupacion = ocupacion
+        self.solicitud = solicitud
         
         
 
@@ -130,7 +136,8 @@ class CertificacionI(db.Model):
             "completeName" : self.completeName,
             "cedula" : self.cedula,
             "promedioMensual" : self.promedioMensual,
-            "ocupacion" : self.ocupacion
+            "ocupacion" : self.ocupacion,
+            "solicitud" : self.solicitud
         } 
     
 class DeclaracionImp(db.Model):
@@ -142,13 +149,15 @@ class DeclaracionImp(db.Model):
     ingresos = db.Column(db.String(100), unique=True, nullable=False)
     costos = db.Column(db.String(100), unique=True, nullable=False)
     gastos = db.Column(db.String(100), unique=True, nullable=False)
+    solicitud = db.Column(db.String(100), unique=True, nullable=False)
 
-    def __init__(self,completeName,cedula,ingresos,costos,gastos):
+    def __init__(self,completeName,cedula,ingresos,costos,gastos,solicitud):
         self.completeName = completeName
         self.cedula  = cedula
         self.ingresos = ingresos
         self.costos = costos
         self.gastos = gastos
+        self.solicitud = solicitud
         
 
     def serialize(self):
@@ -157,7 +166,8 @@ class DeclaracionImp(db.Model):
             "cedula" : self.cedula,
             "ingresos" : self.ingresos,
             "costos" : self.costos,
-            "gastos" : self.gastos
+            "gastos" : self.gastos,
+            "solicitud" : self.solicitud
         } 
     
 class Asesoria(db.Model):
