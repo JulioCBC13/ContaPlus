@@ -40,11 +40,9 @@ export const Services = () => {
               </button>
             </Link>
             <Link to="/datos-balance">
-              {store.listaBalances.lenght((index)=>
               <button type="submit" className="btn">
-                Hay {index} solicitudes realizadas
+                Hay {store.listaBalances.length} solicitudes realizadas
               </button>
-              )}
             </Link>
             <button type="submit" className="btn">
               Solicitud completada. Lista para descarga.

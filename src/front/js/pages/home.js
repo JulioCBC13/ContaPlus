@@ -301,7 +301,8 @@ export const Home = () => {
                       </div>
                       <a
                         className="text-decoration-none link-dark stretched-link"
-                        href="#!"
+                        href="https://finanzasdigital.com/2023/02/margarita-canaima-los-roques-mochima-y-morrocoy-fueron-los-destinos-mas-visitados-en-2022-segun-conseturismo/"
+                        target={"_blank"}
                       >
                         <h5 className="card-title mb-3">
                         Margarita, Canaima, Los Roques, Mochima y Morrocoy fueron los destinos más visitados en 2022, según Conseturismo
@@ -328,7 +329,7 @@ export const Home = () => {
                       <a
                         className="text-decoration-none link-dark stretched-link"
                         id="link"
-                        href="https://www.bolsadecaracas.com/"
+                        href="https://finanzasdigital.com/2023/02/a-partir-de-este-1feb-se-exige-documentacion-de-vehiculos-particulares-para-cruzar-la-frontera/"
                         target={"_blank"}
                       >
                         <h5 className="card-title mb-3">
