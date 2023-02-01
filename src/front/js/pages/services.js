@@ -132,16 +132,20 @@ export const Services = () => {
             dirigirse a ningún sitio.
           </h4>
           <form className="d-flex justify-content-start">
-            <Link to="/asesoria">
-              <button type="submit" className="btn btn-success">
-                Asesoría Personalizada
-              </button>
-            </Link>
-            <Link to="/datos-asesoria">
-              <button type="submit" className="btn">
-                Aviso de solicitud realizada
-              </button>
-            </Link>
+            {store.usuario && (
+              <Link to="/asesoria">
+                <button type="submit" className="btn btn-success">
+                  Asesoría Personalizada
+                </button>
+              </Link>
+            )}
+            {store.contador && (
+              <Link to="/datos-asesoria">
+                <button type="submit" className="btn">
+                  Aviso de solicitud realizada
+                </button>
+              </Link>
+            )}
             <button type="submit" className="btn">
               Solicitud completada. Lista para descarga.
             </button>
