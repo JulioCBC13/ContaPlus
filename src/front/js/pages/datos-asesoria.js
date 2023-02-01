@@ -22,17 +22,18 @@ export const AsesoriaDatos = () => {
       <div className="valores d-flex flex-row">
       <br/><br/>
       {store.listaAsesorias.map((solicitud,index)=>
-       <div className="card3 mx-3" key={index}>
-       <div className="card3-body px-2 py-2">
-       <h5 className="card3-title">Solicitud N. {index+1}</h5>
-       <h5 className="card3-title">Fecha: {solicitud.date}</h5>
-       <h5 className="card3-title">Hora: {solicitud.time}</h5>
-       <h5 className="card3-title">Motivo: {solicitud.motivo}</h5>
-       <button className="btn btn-primary">Procesar</button>
+       <div className="card4 mx-3" key={index}>
+       <div className="card4-body px-2 py-2">
+       <h5 className="card4-title"><u>Solicitud N°:</u> {index+1}</h5>
+       <h5 className="card4-title"><u>Fecha:</u> {solicitud.date}</h5>
+       <h5 className="card4-title"><u>Hora:</u> {solicitud.time}</h5>
+       <h5 className="card4-title"><u>Motivo:</u> {solicitud.motivo}</h5>
+       <button className="btn procesar">Procesar</button>
        </div>
        </div>  
       )} 
       </div>
+      <br/><br/>
     </div>
   );
 };

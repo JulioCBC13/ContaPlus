@@ -23,14 +23,14 @@ export const IngresosDatos = () => {
       <div className="valores d-flex flex-row">
       <br/><br/>
         {store.listaIngresos.map((solicitud,index)=>
-       <div className="card3 mx-3" key={index}>
-       <div className="card2-body px-2 py-2">
-       <h5 className="card2-title">Solicitud N. {index+1}</h5>
-       <h5 className="card2-title">Hecha por: {solicitud.completeName}</h5>
-       <h5 className="card2-title">Cédula: {solicitud.cedula}</h5>
-       <h5 className="card2-title">Información Bancaria: {solicitud.promedioMensual}</h5>
-       <h5 className="card2-title">Vehículos: {solicitud.ocupacion}</h5>
-       <button className="btn btn-primary">Procesar</button>
+       <div className="card5 mx-3" key={index}>
+       <div className="card5-body px-2 py-2">
+       <h5 className="card5-title"><u>Solicitud N°:</u> {index+1}</h5>
+       <h5 className="card5-title"><u>Hecha por:</u> {solicitud.completeName}</h5>
+       <h5 className="card5-title"><u>Cédula:</u> {solicitud.cedula}</h5>
+       <h5 className="card5-title"><u>Promedio mensual de ingresos:</u> {solicitud.promedioMensual}</h5>
+       <h5 className="card5-title"><u>Profesión u ocupación:</u> {solicitud.ocupacion}</h5>
+       <button className="btn procesar">Procesar</button>
        </div>
        </div>   
         )  } 

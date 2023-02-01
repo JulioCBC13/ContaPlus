@@ -24,13 +24,13 @@ export const ImpuestosDatos = () => {
       {store.listaImpuestos.map((solicitud,index)=>
        <div className="card3 mx-3" key={index}>
        <div className="card3-body px-2 py-2">
-       <h5 className="card3-title">Solicitud N. {index+1}</h5>
-       <h5 className="card3-title">Hecha por: {solicitud.completeName}</h5>
-       <h5 className="card3-title">Cédula: {solicitud.cedula}</h5>
-       <h5 className="card3-title">Ingresos: {solicitud.ingresos}</h5>
-       <h5 className="card3-title">Costos: {solicitud.costos}</h5>
-       <h5 className="card3-title">Gastos: {solicitud.gastos}</h5>
-       <button className="btn btn-primary">Procesar</button>
+       <h5 className="card3-title"><u>Solicitud N°:</u> {index+1}</h5>
+       <h5 className="card3-title"><u>Hecha por:</u> {solicitud.completeName}</h5>
+       <h5 className="card3-title"><u>Cédula:</u> {solicitud.cedula}</h5>
+       <h5 className="card3-title"><u>Ingresos:</u> {solicitud.ingresos}</h5>
+       <h5 className="card3-title"><u>Costos:</u> {solicitud.costos}</h5>
+       <h5 className="card3-title"><u>Gastos:</u> {solicitud.gastos}</h5>
+       <button className="btn procesar">Procesar</button>
        </div>
        </div>   
         )  } 
