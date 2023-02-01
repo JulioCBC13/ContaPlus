@@ -1,10 +1,8 @@
 import React from "react";
-import "/workspace/Proyecto-Final/src/front/js/component/navbar.css";
+import "./navbar.css";
 import { Link } from "react-router-dom";
 
 export const Footer = () => (
-
-  
   /*<footer classNameName="footer mt-auto py-3 text-center">
     <p>© 2022 Copyright: CONTAPLUS+</p>
   </footer>

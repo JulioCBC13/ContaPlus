@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import "/workspace/Proyecto-Final/src/front/js/component/navbar.css";
+import "./navbar.css";
 import "../../img/logo navbar.png";
 import { Context } from "../store/appContext";
 
@@ -77,12 +77,15 @@ export const Navbar = () => {
             </li>
           </ul>
           {store.token && (
-          <Link to="/">
-            <button className="btn register d-flex align-items-center" onClick={() => actions.logout()}>
-              Salir &nbsp;               
-              <i className="fa-solid fa-right-from-bracket"/>
-            </button>
-          </Link>
+            <Link to="/">
+              <button
+                className="btn register d-flex align-items-center"
+                onClick={() => actions.logout()}
+              >
+                Salir &nbsp;
+                <i className="fa-solid fa-right-from-bracket" />
+              </button>
+            </Link>
           )}
         </div>
       </div>

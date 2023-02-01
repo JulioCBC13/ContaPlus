@@ -1,6 +1,6 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import "/workspace/Proyecto-Final/src/front/styles/services.css";
+import "../../styles/services.css";
 import "../../img/Servicios.png";
 import "../../img/balance.jpg";
 import "../../img/ingresos.jpg";
@@ -9,9 +9,9 @@ import "../../img/asesoria.jpg";
 import "../../img/contaplus2.png";
 
 export const Services = () => {
-  useEffect(()=>{
-    window.scrollTo(0,0);
-  },[])
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="services">
       <div className="title-page d-flex justify-content-between align-items-center">
@@ -23,21 +23,22 @@ export const Services = () => {
         <img src="balance.jpg" width="450" height="250" alt="images" />
         <div className="texto1">
           <h4>
-            Los balances personales son documentos contables que muestran información
-            acerca de la situación financiera particular del solicitante, que incluye
-            detalles debidamente ordenados acerca de los activos, pasivos y patrimonios
-            que se poseen en un momento determinado.
+            Los balances personales son documentos contables que muestran
+            información acerca de la situación financiera particular del
+            solicitante, que incluye detalles debidamente ordenados acerca de
+            los activos, pasivos y patrimonios que se poseen en un momento
+            determinado.
           </h4>
           <form className="d-flex justify-content-start">
-          <Link to="/balance">
-            <button type="submit" className="btn">
-              Solicitud del Cliente
-            </button>
+            <Link to="/balance">
+              <button type="submit" className="btn">
+                Solicitud del Cliente
+              </button>
             </Link>
             <Link to="/datos-balance">
-            <button type="submit" className="btn">
-              Aviso de solicitud realizada
-            </button>
+              <button type="submit" className="btn">
+                Aviso de solicitud realizada
+              </button>
             </Link>
             <button type="submit" className="btn">
               Solicitud completada. Lista para descarga.
@@ -48,22 +49,23 @@ export const Services = () => {
       <div className="descripcion2">
         <div className="texto1">
           <h4>
-            Una certificación de ingresos es un documento que se emite para avalar y
-            dar legitimidad a los ingresos del solicitante en un tiempo determinado.
-            Para emitirlo se debe realizar una verificación de estados de cuenta bancarios, 
-            recibos de nómina o facturas de ventas que permitan corroborar que dichos
-            ingresos son exactos y provienen de actividades lícitas.
+            Una certificación de ingresos es un documento que se emite para
+            avalar y dar legitimidad a los ingresos del solicitante en un tiempo
+            determinado. Para emitirlo se debe realizar una verificación de
+            estados de cuenta bancarios, recibos de nómina o facturas de ventas
+            que permitan corroborar que dichos ingresos son exactos y provienen
+            de actividades lícitas.
           </h4>
           <form className="d-flex justify-content-start">
-          <Link to="/ingresos">
-            <button type="submit" className="btn btn-success">
-              Certificación de Ingresos
-            </button>
+            <Link to="/ingresos">
+              <button type="submit" className="btn btn-success">
+                Certificación de Ingresos
+              </button>
             </Link>
             <Link to="/datos-ingresos">
-            <button type="submit" className="btn">
-              Aviso de solicitud realizada
-            </button>
+              <button type="submit" className="btn">
+                Aviso de solicitud realizada
+              </button>
             </Link>
             <button type="submit" className="btn">
               Solicitud completada. Lista para descarga.
@@ -78,21 +80,22 @@ export const Services = () => {
         <img src="impuestos.png" width="450" height="250" alt="images" />
         <div className="texto1">
           <h4>
-            Las declaraciones de impuestos son documentos que se presentan ante los
-            organimos de recaudación gubernamentales. Éstos deben reflejar la cantidad de
-            ingresos obtenidos durante el último año, de modo que en base a ellos se 
-            calcule la cantidad de tributos a cancelar por el contribuyente.
+            Las declaraciones de impuestos son documentos que se presentan ante
+            los organimos de recaudación gubernamentales. Éstos deben reflejar
+            la cantidad de ingresos obtenidos durante el último año, de modo que
+            en base a ellos se calcule la cantidad de tributos a cancelar por el
+            contribuyente.
           </h4>
           <form className="d-flex justify-content-start">
-          <Link to="/impuestos">
-            <button type="submit" className="btn btn-success">
-              Declaración de Impuestos
-            </button>
+            <Link to="/impuestos">
+              <button type="submit" className="btn btn-success">
+                Declaración de Impuestos
+              </button>
             </Link>
             <Link to="/datos-impuestos">
-            <button type="submit" className="btn">
-              Aviso de solicitud realizada
-            </button>
+              <button type="submit" className="btn">
+                Aviso de solicitud realizada
+              </button>
             </Link>
             <button type="submit" className="btn">
               Solicitud completada. Lista para descarga.
@@ -105,22 +108,23 @@ export const Services = () => {
       <div className="descripcion2">
         <div className="texto1">
           <h4>
-            Si desea recibir asesoría personalizada en el área financiera o desea
-            despejar dudas en cualquier otra área, puede agendar una cita virtual
-            con nuestro personal, quien le atenderá gustosamente, poniendo a su disposición
-            todo nuestro apoyo para ayudarle a solventar sus necesidades
-            en el menor tiempo posible y sin tener que dirigirse a ningún sitio.
+            Si desea recibir asesoría personalizada en el área financiera o
+            desea despejar dudas en cualquier otra área, puede agendar una cita
+            virtual con nuestro personal, quien le atenderá gustosamente,
+            poniendo a su disposición todo nuestro apoyo para ayudarle a
+            solventar sus necesidades en el menor tiempo posible y sin tener que
+            dirigirse a ningún sitio.
           </h4>
           <form className="d-flex justify-content-start">
-          <Link to="/asesoria">
-            <button type="submit" className="btn btn-success">
-              Asesoría Personalizada
-            </button>
+            <Link to="/asesoria">
+              <button type="submit" className="btn btn-success">
+                Asesoría Personalizada
+              </button>
             </Link>
             <Link to="/datos-asesoria">
-            <button type="submit" className="btn">
-              Aviso de solicitud realizada
-            </button>
+              <button type="submit" className="btn">
+                Aviso de solicitud realizada
+              </button>
             </Link>
             <button type="submit" className="btn">
               Solicitud completada. Lista para descarga.
@@ -132,9 +136,9 @@ export const Services = () => {
         <img src="asesoria.jpg" width="450" height="250" alt="images" />
       </div>
       <div>
-      <br/><br/>
+        <br />
+        <br />
       </div>
     </div>
-      
   );
 };
