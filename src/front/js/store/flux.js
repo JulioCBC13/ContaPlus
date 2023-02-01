@@ -165,7 +165,6 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
       nuevoBalance: async (balance) => {
-        console.log("se creó el balance", balance);
         const resp = await fetch(process.env.BACKEND_URL + "/api/balance", {
           method: "POST", // *GET, POST, PUT, DELETE, etc.
           headers: {
@@ -177,7 +176,6 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
       nuevaCertifIngresos: async (ingresos) => {
-        console.log("se creó la certificación de ingresos", ingresos);
         const resp = await fetch(process.env.BACKEND_URL + "/api/ingresos", {
           method: "POST", // *GET, POST, PUT, DELETE, etc.
           headers: {
@@ -189,7 +187,6 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
       nuevaDeclaraImpuestos: async (impuestos) => {
-        console.log("se creó la declaración de impuestos", impuestos);
         const resp = await fetch(process.env.BACKEND_URL + "/api/impuestos", {
           method: "POST", // *GET, POST, PUT, DELETE, etc.
           headers: {
@@ -201,7 +198,6 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
       nuevaAsesoria: async (asesoria) => {
-        console.log("se creó la cita para asesoria personalizada", asesoria);
         const resp = await fetch(process.env.BACKEND_URL + "/api/asesorias", {
           method: "POST", // *GET, POST, PUT, DELETE, etc.
           headers: {

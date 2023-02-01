@@ -87,8 +87,11 @@ def balancepersonal():
         return jsonify({"error":"Falto Cantidad de Vehiculos"}), 400
     if "propiedadesAmount" not in body :
         return jsonify({"error":"Falto Cantidad de Propiedades"}), 400
+    # if "solicitud" not in body :
+    #     return jsonify({"error":"Falto solicitud"}), 400
+    
 
-    nuevo_balance_personal = BalanceP(body["completeName"],body["cedula"],body["bancoInfo"],body["vehiculosAmount"],body["propiedadesAmount"])
+    nuevo_balance_personal = BalanceP(body["completeName"],body["cedula"],body["bancoInfo"],body["vehiculosAmount"],body["propiedadesAmount"],None)
     
     try:
         db.session.add(nuevo_balance_personal)
@@ -118,9 +121,11 @@ def CertificacionIngresos():
         return jsonify({"error":"Falto Promedio Mensual"}), 400
     if "ocupacion" not in body :
         return jsonify({"error":"Falto Ocupacion"}), 400
+    # if "solicitud" not in body :
+    #     return jsonify({"error":"Falto solicitud"}), 400
     
 
-    nuevo_certificacion_ingresos = CertificacionI(body["completeName"],body["cedula"],body["promedioMensual"],body["ocupacion"])
+    nuevo_certificacion_ingresos = CertificacionI(body["completeName"],body["cedula"],body["promedioMensual"],body["ocupacion"],None)
     
     try:
         db.session.add(nuevo_certificacion_ingresos)
@@ -154,9 +159,12 @@ def DeclaracionImpuestos():
         return jsonify({"error":"Falto Costos"}), 400   
     if "gastos" not in body :
         return jsonify({"error":"Falto Gastos"}), 400
+    # if "solicitud" not in body :
+    #     return jsonify({"error":"Falto solicitud"}), 400
+    
     
 
-    nuevo_declaracion_impuestos = DeclaracionImp(body["completeName"],body["cedula"],body["ingresos"],body["costos"],body["gastos"])
+    nuevo_declaracion_impuestos = DeclaracionImp(body["completeName"],body["cedula"],body["ingresos"],body["costos"],body["gastos"],None)
     
     try:
         db.session.add(nuevo_declaracion_impuestos)

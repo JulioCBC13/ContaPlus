@@ -90,7 +90,7 @@ class BalanceP(db.Model):
     bancoInfo = db.Column(db.String(100), unique=True, nullable=False)
     vehiculosAmount = db.Column(db.String(100), unique=True, nullable=False)
     propiedadesAmount = db.Column(db.String(100), unique=True, nullable=False)
-    solicitud = db.Column(db.String(100), unique=True, nullable=False)
+    solicitud = db.Column(db.String(100), unique=True, nullable=True)
 
     def __init__(self,completeName,cedula,bancoInfo,vehiculosAmount,propiedadesAmount,solicitud):
         self.completeName = completeName
@@ -120,7 +120,7 @@ class CertificacionI(db.Model):
     cedula = db.Column(db.String(100), unique=True, nullable=False)
     promedioMensual = db.Column(db.String(100), unique=True, nullable=False)
     ocupacion = db.Column(db.String(100), unique=True, nullable=False)
-    solicitud = db.Column(db.String(100), unique=True, nullable=False)
+    solicitud = db.Column(db.String(100), unique=True, nullable=True)
 
     def __init__(self,completeName,cedula,promedioMensual,ocupacion,solicitud):
         self.completeName = completeName
@@ -149,7 +149,7 @@ class DeclaracionImp(db.Model):
     ingresos = db.Column(db.String(100), unique=True, nullable=False)
     costos = db.Column(db.String(100), unique=True, nullable=False)
     gastos = db.Column(db.String(100), unique=True, nullable=False)
-    solicitud = db.Column(db.String(100), unique=True, nullable=False)
+    solicitud = db.Column(db.String(100), unique=True, nullable=True)
 
     def __init__(self,completeName,cedula,ingresos,costos,gastos,solicitud):
         self.completeName = completeName
