@@ -15,8 +15,8 @@ import "../../img/github.png";
 import "../../img/gitpod.png";
 import "../../img/sql.png";
 import "../../img/bcv.png";
-import "../../img/billetes bs.jpg";
-import "../../img/bolsa.jpg";
+import "../../img/Margarita.jpg";
+import "../../img/Puente-Tienditas.jpg";
 import "../../img/instagram.png";
 import "../../img/facebook.png";
 import "../../img/twitter.png";
@@ -272,15 +272,15 @@ export const Home = () => {
                         target={"_blank"}
                       >
                         <h5 className="card-title mb-3">
-                          Tipo de Cambio BCV: 19,4520 Bs./USD (+0,90%) para el
-                          lunes 16 de Enero
+                          Tipo de Cambio BCV: 22,4381 Bs./USD (+0,28%) para el
+                          jueves 2 de Febrero
                         </h5>
                       </a>
                       <p className="card-text mb-0">
                         El BCV informa que el tipo de cambio promedio ponderado
                         resultante de las operaciones diarias de las mesas de
                         cambio activas de las instituciones bancarias
-                        participantes se ubicó en 19,4520 Bs/USD (+0,90%). Para
+                        participantes se ubicó en 22,4381 Bs/USD (+0,28%). Para
                         más información en www.bcv.org.ve haciendo click a este
                         anuncio
                       </p>
@@ -292,7 +292,7 @@ export const Home = () => {
                   <div className="card h-100 shadow border-0">
                     <img
                       className="card-img-top"
-                      src="billetes bs.jpg"
+                      src="Margarita.jpg"
                       alt="..."
                     />
                     <div className="card-body p-4">
@@ -304,15 +304,15 @@ export const Home = () => {
                         href="#!"
                       >
                         <h5 className="card-title mb-3">
-                          Hermes Pérez analiza la causa de la hiperinflación en
-                          Venezuela: “la emisión excesiva de dinero”
+                        Margarita, Canaima, Los Roques, Mochima y Morrocoy fueron los destinos más visitados en 2022, según Conseturismo
                         </h5>
                       </a>
                       <p className="card-text mb-0">
-                        El economista y profesor universitario, Hermes Pérez,
-                        aseveró que persiste la causa de la hiperinflación en
-                        Venezuela por «la emisión excesiva de dinero para
-                        financiar (ilegal) al fisco».
+                      El presidente de Conseturismo, Leudo González, 
+                      expresó que se avista una recuperación en el sector de 
+                      turismo internacional con las conexiones anunciadas con 
+                      Colombia, y la intención de recuperar turistas de Boa Vista, 
+                      Brasil, que solía ser un número importante en el turismo venezolano.
                       </p>
                     </div>
                   </div>
@@ -320,7 +320,7 @@ export const Home = () => {
                 {/* ---------------- card 3 ---------------- */}
                 <div className="col-lg-4 mb-5">
                   <div className="card h-100 shadow border-0">
-                    <img className="card-img-top" src="bolsa.jpg" alt="..." />
+                    <img className="card-img-top" src="Puente-Tienditas.jpg" alt="..." />
                     <div className="card-body p-4">
                       <div className="badge bg-primary bg-gradient rounded-pill mb-2">
                         Noticias
@@ -332,15 +332,14 @@ export const Home = () => {
                         target={"_blank"}
                       >
                         <h5 className="card-title mb-3">
-                          Índice Bursátil Caracas cerró el #13Ene en 20.236,75
-                          puntos (+1,94%) en 4 días
+                        A partir de este #1Feb se exige documentación a vehículos particulares para cruzar la frontera
                         </h5>
                       </a>
                       <p className="card-text mb-0">
-                        En la Bolsa de Valores de Caracas, entre el 10 y el 13
-                        de enero de 2023, se negoció un total de 8 millones 446
-                        mil 919 bolívares. Para más información en
-                        www.bolsadecaracas.com haciendo click a este anuncio
+                      El coordinador del bloque constituyente del estado Táchira, 
+                      Williams Parada, informó que, a partir de este miércoles 1° 
+                      de febrero, los ciudadanos que se movilicen por el puente 
+                      Atanasio Girardot “Tienditas”, …
                       </p>
                     </div>
                   </div>

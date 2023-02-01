@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import "../../styles/services.css";
 import "../../img/Servicios.png";
@@ -9,8 +10,11 @@ import "../../img/asesoria.jpg";
 import "../../img/contaplus2.png";
 
 export const Services = () => {
+  const { store, actions } = useContext(Context);
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    actions.loadBalances();
   }, []);
   return (
     <div className="services">
@@ -36,9 +40,11 @@ export const Services = () => {
               </button>
             </Link>
             <Link to="/datos-balance">
+              {store.listaBalances.lenght((index)=>
               <button type="submit" className="btn">
-                Aviso de solicitud realizada
+                Hay {index} solicitudes realizadas
               </button>
+              )}
             </Link>
             <button type="submit" className="btn">
               Solicitud completada. Lista para descarga.

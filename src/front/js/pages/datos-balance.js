@@ -38,7 +38,7 @@ export const BalanceDatos = () => {
         <button className="btn procesar">Procesar</button>
         </div>
         </div>  
-        )  }    
+        )}    
       </div>
       <br/><br/>
     </div>
