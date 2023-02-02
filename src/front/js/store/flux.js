@@ -6,7 +6,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       listaImpuestos: [],
       listaAsesorias: [],
       message: null,
-      token: localStorage.getItem("token"),
+      token: sessionStorage.getItem("token"),
       usuario: null,
       contador: null,
       demo: [
@@ -134,7 +134,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       // sessionStorage.setItem("token", data.token);
       //},
       logout: () => {
-        const token = localStorage.removeItem("token");
+        const token = sessionStorage.removeItem("token");
         console.log("Se han borrado todos los tokens");
         setStore({ token: null });
       },
