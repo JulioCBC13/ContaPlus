@@ -92,7 +92,7 @@ export const AboutUs = () => {
         </div>
       </div>
       <div className="row col-md-6 mx-auto d-flex flex-column align-items-center justify-content-center">
-        <h2 className=" fs-1 mt-5 text-center">Y ahora... ¡Vamos por más!</h2>
+        <h2 className=" fs-1 mt-5 text-center">Y ahora... ¡Vamos por más!.</h2>
       </div>
       <div className="container mt-2 pt-5">
         <div className="main-timeline-4 text-black">
