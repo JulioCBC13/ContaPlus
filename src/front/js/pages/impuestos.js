@@ -67,7 +67,7 @@ export const Impuestos = () => {
         <input value={gastos} onChange={(e) => setGastos(e.target.value)} type="text"/>
         <br/><br/>
         <button onClick={crearDeclaraImpuestos} type="submit" className="btn btn-success">
-              Enviar solicitud
+              Solicitar Declaración de Impuestos
             </button>
             <br/><br/>
       </div>

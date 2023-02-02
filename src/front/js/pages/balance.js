@@ -127,7 +127,7 @@ export const Balance = () => {
           type="submit"
           className="btn btn-success"
         >
-          Solicitar Balance
+          Solicitar Balance Personal
         </button>
         <br />
         <br />

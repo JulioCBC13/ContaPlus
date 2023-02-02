@@ -37,7 +37,7 @@ export const Services = () => {
             {store.usuario && (
               <Link to="/balance">
                 <button type="submit" className="btn">
-                  Solicitud del Cliente
+                  Solicitar Balance Personal
                 </button>
               </Link>
             )}
@@ -68,7 +68,7 @@ export const Services = () => {
             {store.usuario && (
               <Link to="/ingresos">
                 <button type="submit" className="btn btn-success">
-                  Certificación de Ingresos
+                  Solicitar Certificación de Ingresos
                 </button>
               </Link>
             )}
@@ -102,7 +102,7 @@ export const Services = () => {
             {store.usuario && (
               <Link to="/impuestos">
                 <button type="submit" className="btn btn-success">
-                  Declaración de Impuestos
+                  Solicitar Declaración de Impuestos
                 </button>
               </Link>
             )}
@@ -135,7 +135,7 @@ export const Services = () => {
             {store.usuario && (
               <Link to="/asesoria">
                 <button type="submit" className="btn btn-success">
-                  Asesoría Personalizada
+                  Solicitar Asesoría Personalizada
                 </button>
               </Link>
             )}

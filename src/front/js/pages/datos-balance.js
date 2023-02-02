@@ -1,10 +1,36 @@
-import React,{ useContext, useEffect } from "react";
+import React,{ useContext,useState,useEffect } from "react";
 import { Context } from "../store/appContext";
 import "../../img/Balance datos.png";
 import "../../img/balance.jpg";
+import "../../styles/datos-balance.css"
+
+const myFunction = () => {
+  let x = document.getElementById("myDiv");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+const Visible = ()=>{
+  const [infoUsuario, setInfoUsuario] = useState("");
+
+  return(
+  <div>
+  <br/>
+  <input onChange={(e) => setInfoUsuario(e.target.files[0])} type="file"/>
+  <br/><br/>
+  <button className="btn procesar">Enviar Documento</button>
+  </div>
+  );
+}
 
 export const BalanceDatos = () => {
   const { store, actions } = useContext(Context);
+
+  
+
   useEffect(()=>{
     actions.loadBalances();
   },[])
@@ -30,12 +56,15 @@ export const BalanceDatos = () => {
         <h5 className="card2-title"><u>Cédula:</u> {solicitud.cedula}</h5>
         <h5 className="card2-title"><u>Información Bancaria:</u><br/>
         <a href={solicitud.bancoInfo} target="_blank">
-          <i class="fa-solid fa-file-pdf fa-2x"/>
+          <i className="fa-solid fa-file-pdf fa-2x"/>
         </a>
         </h5>
         <h5 className="card2-title"><u>Vehículos:</u> {solicitud.vehiculosAmount}</h5>
         <h5 className="card2-title"><u>Propiedades:</u> {solicitud.propiedadesAmount}</h5>
-        <button className="btn procesar">Procesar</button>
+        <button className="btn procesar" onClick={myFunction} >Procesar</button>
+        <div id="myDiv">
+        <Visible/>
+        </div>
         </div>
         </div>  
         )}    

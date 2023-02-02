@@ -61,7 +61,7 @@ export const Ingresos = () => {
         <input value={profesion} onChange={(e) => setProfesion(e.target.value)} type="text"/>
         <br/><br/>
         <button onClick={crearCertifIngresos} type="submit" className="btn btn-success">
-              Enviar solicitud
+              Solicitar Certificación de Ingresos
             </button>
             <br/><br/>
       </div>

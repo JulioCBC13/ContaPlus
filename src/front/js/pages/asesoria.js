@@ -55,7 +55,7 @@ export const Asesoria = () => {
         <textarea value={motivo} onChange={(e)=> setMotivo(e.target.value)} name="textarea" rows="5" cols="50"/>
         <br/><br/>
         <button onClick={agendarCita} type="submit" className="btn btn-success">
-              Enviar solicitud
+              Solicitar Asesoría Personalizada
             </button>
             <br/><br/>
       </div>
