@@ -75,7 +75,7 @@ export const Registro = () => {
 
             <div className="input mb-3" id="#EmailContraseña ">
               <input
-                type="text"
+                type="email"
                 onChange={(evento) => setEmail(evento.target.value)}
                 value={email}
                 className="form-control mb-1"
@@ -86,7 +86,7 @@ export const Registro = () => {
               <input
                 onChange={(evento) => setPassword(evento.target.value)}
                 value={password}
-                type="text"
+                type="password"
                 className="form-control mb-1"
                 aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-default"

@@ -13,6 +13,10 @@ export const AboutUs = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const arriba = ()=>{
+    window.scrollTo(0,0);
+  }
+
   return (
     <div className="about-us">
       <div className="title-page d-flex justify-content-center align-items-center">
@@ -88,14 +92,14 @@ export const AboutUs = () => {
         </div>
       </div>
       <div className="row col-md-6 mx-auto d-flex flex-column align-items-center justify-content-center">
-        <h2 className=" fs-1 mt-5 text-center">¡Let's go for more!.</h2>
+        <h2 className=" fs-1 mt-5 text-center">Y ahora... ¡Vamos por más!</h2>
       </div>
       <div className="container mt-2 pt-5">
         <div className="main-timeline-4 text-black">
           <div className="timeline-4 left-4">
             <div className="card grounded-radiants">
               <div className="card-body p-2 d-flex flex-column align-items-center">
-                <i className="fas fa-solid fa-plus fa-4x mb-3"></i>
+                <i className="ico fas fa-solid fa-plus fa-4x mb-3"></i>
                 <h4>Create Account</h4>
                 <p className="text-center">
                   Un equipo unido y comprometido con el desarrollo, en donde
@@ -108,7 +112,7 @@ export const AboutUs = () => {
           <div className="timeline-4 right-4">
             <div className="card grounded-radiants">
               <div className="card-body p-2 d-flex flex-column align-items-center">
-                <i className="fa-solid fa-clipboard fa-4x mb-3"></i>
+                <i className="ico fa-solid fa-clipboard fa-4x mb-3"></i>
                 <h4>Add Company</h4>
                 <p className="text-center">
                   Seguimos tomando nota, ya esto en 2 meses sera afianzado para
@@ -121,7 +125,7 @@ export const AboutUs = () => {
           <div className="timeline-4 left-4">
             <div className="card grounded-radiants">
               <div className="card-body p-2 d-flex flex-column align-items-center">
-                <i className="fas fa-solid fa-box fa-4x mb-3"></i>
+                <i className="ico fas fa-solid fa-box fa-4x mb-3"></i>
                 <h4>Add Products</h4>
                 <p className="text-center">
                   En 5 meses esto será una caja de sorpresas por las
@@ -133,7 +137,7 @@ export const AboutUs = () => {
           <div className="timeline-4 right-4">
             <div className="card grounded-radiants">
               <div className="card-body p-2 d-flex flex-column align-items-center">
-                <i class="fa-regular fa-thumbs-up fa-4x mb-3"></i>
+                <i class="ico fa-regular fa-thumbs-up fa-4x mb-3"></i>
                 <h4>Start Profiting</h4>
                 <p className="text-center">
                   No queda mas que decir que ¡Gracias! contamos contigo...{" "}
@@ -142,11 +146,11 @@ export const AboutUs = () => {
             </div>
           </div>
         </div>
-
-        <button className="d-flex justify-content-center mt-5">
-          type="submit" id="boton" onClick={AboutUs}
-        </button>
       </div>
+      <button className="btn procesar d-flex justify-content-center mt-5" onClick={arriba}>
+          Ir arriba<br/>▲
+        </button>
+        <br/><br/>
     </div>
   );
 };

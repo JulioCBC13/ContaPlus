@@ -352,8 +352,12 @@ textarea {
   bottom: -4px;
   left: -4px;
   right: -4px;
-  background: linear-gradient(#5bd5c9, #d3508e);
+  background: linear-gradient(#5bd5c9, #10597C);
   content: "";
   z-index: -1;
   border-radius: 16px;
+}
+
+.ico{
+  color:#10394d;
 }
