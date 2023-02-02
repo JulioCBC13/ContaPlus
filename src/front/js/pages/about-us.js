@@ -87,55 +87,66 @@ export const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className="last"></div>
+      <div className="row col-md-6 mx-auto d-flex flex-column align-items-center justify-content-center">
+        <h2 className=" fs-1 mt-5 text-center">¡Let's go for more!.</h2>
+      </div>
+      <div className="container mt-2 pt-5">
+        <div className="main-timeline-4 text-black">
+          <div className="timeline-4 left-4">
+            <div className="card grounded-radiants">
+              <div className="card-body p-2 d-flex flex-column align-items-center">
+                <i className="fas fa-solid fa-plus fa-4x mb-3"></i>
+                <h4>Create Account</h4>
+                <p className="text-center">
+                  Un equipo unido y comprometido con el desarrollo, en donde
+                  vamos sumando esfuerzos cada dia más para metas futuras;
+                  porque los buenos somos más.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="timeline-4 right-4">
+            <div className="card grounded-radiants">
+              <div className="card-body p-2 d-flex flex-column align-items-center">
+                <i className="fa-solid fa-clipboard fa-4x mb-3"></i>
+                <h4>Add Company</h4>
+                <p className="text-center">
+                  Seguimos tomando nota, ya esto en 2 meses sera afianzado para
+                  el mejor servicio prestado; porque un mejor servicio es un
+                  confort.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="timeline-4 left-4">
+            <div className="card grounded-radiants">
+              <div className="card-body p-2 d-flex flex-column align-items-center">
+                <i className="fas fa-solid fa-box fa-4x mb-3"></i>
+                <h4>Add Products</h4>
+                <p className="text-center">
+                  En 5 meses esto será una caja de sorpresas por las
+                  funcionalidades y servicion que mejoraremos. ¡Adelante!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="timeline-4 right-4">
+            <div className="card grounded-radiants">
+              <div className="card-body p-2 d-flex flex-column align-items-center">
+                <i class="fa-regular fa-thumbs-up fa-4x mb-3"></i>
+                <h4>Start Profiting</h4>
+                <p className="text-center">
+                  No queda mas que decir que ¡Gracias! contamos contigo...{" "}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <section className="py-5">
-        <ul className="timeline">
-          <li className="timeline-item mb-5">
-            <h5 className="fw-bold">Our company starts its operations</h5>
-            <p className="text-muted mb-2 fw-bold">11 March 2020</p>
-            <p className="text-muted">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-              necessitatibus adipisci, ad alias, voluptate pariatur officia
-              repellendus repellat inventore fugit perferendis totam dolor
-              voluptas et corrupti distinctio maxime corporis optio?
-            </p>
-          </li>
-
-          <li className="timeline-item mb-5">
-            <h5 className="fw-bold">First customer</h5>
-            <p className="text-muted mb-2 fw-bold">19 March 2020</p>
-            <p className="text-muted">
-              Quisque ornare dui nibh, sagittis egestas nisi luctus nec. Sed
-              aliquet laoreet sapien, eget pulvinar lectus maximus vel.
-              Phasellus suscipit porta mattis.
-            </p>
-          </li>
-
-          <li className="timeline-item mb-5">
-            <h5 className="fw-bold">Our team exceeds 10 people</h5>
-            <p className="text-muted mb-2 fw-bold">24 June 2020</p>
-            <p className="text-muted">
-              Orci varius natoque penatibus et magnis dis parturient montes,
-              nascetur ridiculus mus. Nulla ullamcorper arcu lacus, maximus
-              facilisis erat pellentesque nec. Duis et dui maximus dui aliquam
-              convallis. Quisque consectetur purus erat, et ullamcorper sapien
-              tincidunt vitae.
-            </p>
-          </li>
-
-          <li className="timeline-item mb-5">
-            <h5 className="fw-bold">Earned the first million $!</h5>
-            <p className="text-muted mb-2 fw-bold">15 October 2020</p>
-            <p className="text-muted">
-              Nulla ac tellus convallis, pulvinar nulla ac, fermentum diam. Sed
-              et urna sit amet massa dapibus tristique non finibus ligula. Nam
-              pharetra libero nibh, id feugiat tortor rhoncus vitae. Ut suscipit
-              vulputate mattis.
-            </p>
-          </li>
-        </ul>
-      </section>
+        <button className="d-flex justify-content-center mt-5">
+          type="submit" id="boton" onClick={AboutUs}
+        </button>
+      </div>
     </div>
   );
 };
